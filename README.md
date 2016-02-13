@@ -41,7 +41,7 @@ python manage.py runserver 0.0.0.0:
 
 SendSMS:
 
-    --/api_call/sendsms/
+    --/api_calls/sendsms/
 
       method: POST
 

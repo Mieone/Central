@@ -39,6 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'oauth2_provider',
     'corsheaders',
+    'Client',
+    'rest_framework',
+    'django_mailer',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -127,3 +130,21 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
+
+CENTRAL_APP_ID = 'zyDsE9htjdpx9xSS0NqQ4nYhymGMnhPlepkMJVCf'#'FNVtgkQf7zrEaGyDUaS49j6I9c8AMyASHiZUB5M2'
+CENTRAL_APP_SECRET = 'oR1lB4hgaNNMkdZjybe4Lg0RjG9RgzVy8CBfpBEi2EZ3NmEDwMHtbo5myqKwkcr5c52Fmg3JIBxRZ5hAbWTsZJaCAOOHnKq5aOFG3xtkqHibSIUEqln2TUV6howJFg2j'# 'nC4R9llmMIdPXWci9BvP2J2q9RT7hHtLKO439iW8Eng5Sqwjezgws8ItdLnJ8x8MWd0mGAarYSEL8a9BeVaihom3TEwswUflKJFotQiMhqbfWb3JbTbrhzaS4jtTShz7'
+CENTRAL_APP_GRANT_TYPE = 'client_credentials'
+CENTRAL_TOKEN_URL = 'http://central.miebach.tech/o/token/'
+
+
+EMAIL_BACKEND = 'django_mailer.smtp_queue.EmailBackend'
+
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+
+EMAIL_HOST_USER = 'noreplymiebach@gmail.com'
+EMAIL_HOST_PASSWORD = 'miebach123'
+
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+
